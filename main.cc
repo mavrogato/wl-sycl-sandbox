@@ -124,7 +124,7 @@ auto transform_each_impl(Tuple t, std::index_sequence<Is...>) {
 
 template <typename... Args>
 auto transform_each(const std::tuple<Args...>& t) {
-    return transform_each_impl(
+    return detail::transform_each_impl(
         t, std::make_index_sequence<sizeof...(Args)>{});
 }
 
