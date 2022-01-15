@@ -24,4 +24,4 @@ target_link_libraries(${PROJ}
 
 add_custom_target(run
   DEPENDS ${PROJ}
-  COMMAND ${PROJ})
+  COMMAND WAYLAND_DEBUG=1 ./${PROJ})
